@@ -21,7 +21,7 @@ function App() {
       url: '/gallery'
     }).then((response) => {
       // Data received : {id: 2, path: '../images/deer.jpg', description: 'Photo of a dear taken at Glacier National Park.', likes: 0}...
-
+      console.log(response.data);
       setGalleryList(response.data);
     }).catch((error)=> {
       console.log('error getting items', error);
@@ -38,7 +38,7 @@ function App() {
         <header className="App-header">
             <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <GalleryList galleryList = {galleryList}/>
+        {/* <GalleryList galleryList = {galleryList}/> */}
         <p>Gallery goes here</p>
         <img src="images/goat_small.jpg"/>
       </div>
