@@ -13,8 +13,10 @@ export default function GalleryItem({galleryItem, fetchItems}){
             method: 'PUT',
             url: `/gallery/like/${galleryItem.id}`
         }).then((response)=> {
-            console.log('put request is all good', response);
+            // console.log('put request is all good', response);
+            fetchItems();
         }).catch((error)=> {
+            console.log('error with like button update:', error)
 
         })
     }
@@ -22,7 +24,7 @@ export default function GalleryItem({galleryItem, fetchItems}){
     return(
         <div>
             <img src={galleryItem.path} alt={galleryItem.description} />
-            <p>test</p>
+            <p>{galleryItem.likes} people like this photo!</p>
             <button onClick={updateLikes}>Like</button>
         </div>
     );
