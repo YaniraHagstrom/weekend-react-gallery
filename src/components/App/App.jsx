@@ -1,19 +1,17 @@
-import React from 'react';
 import './App.css';
-import Gallery from '../GalleryList/GalleryList.jsx'
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import GalleryList from '../GalleryList/GalleryList.jsx';
 
 
 function App() {
   useEffect(() => {
     fetchItems();
   }, [])
-
+  
   // Used to set state once the gallery Data is received
-  let [galleryList, setGalleryList]= useState();
-
+  let [galleryList, setGalleryList]= useState([]);
+  
   // GET request to get data from server side data file.
   const fetchItems = ()=>{
     axios({
@@ -27,9 +25,7 @@ function App() {
       console.log('error getting items', error);
     })
   }
-
-
-
+  // console.log(galleryList);
 
 
 
@@ -38,9 +34,7 @@ function App() {
         <header className="App-header">
             <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        {/* <GalleryList galleryList = {galleryList}/> */}
-        <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
+        <GalleryList galleryList = {galleryList} fetchItems={fetchItems}/>
       </div>
     );
 }
