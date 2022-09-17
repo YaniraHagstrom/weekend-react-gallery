@@ -29,16 +29,17 @@ export default function GalleryItem({galleryItem, fetchItems}){
     }
 
     return(
-        <div>
+        <div className='card'>
             <div onClick={showDescription}>
                 {photoDescription?
                 <p>{galleryItem.description}</p>:
                 <img src={galleryItem.path} alt={galleryItem.description} /> 
                     }
             </div>
-            <p>{galleryItem.likes} people like this photo!</p>
-            <button onClick={updateLikes}>Like</button>
-
+            <div className='container'>
+                <p>{galleryItem.likes} people like this photo!</p>
+                <button onClick={updateLikes}>Like</button>
+            </div>
         </div>
     );
 
