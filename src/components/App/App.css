@@ -25,10 +25,10 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center s;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-left: 150px;
   margin-right: 150px;
-  gap: 20px 15px;
+  gap: 15px 15px;
 }
 
 .card {
@@ -47,8 +47,9 @@ img {
 
 /* Add some padding inside the card container */
 .container {
-  /* padding: 2px 16px; */
   display: flex;
+  justify-content: center;
+  padding-bottom: 0;
 }
 
 .description {
@@ -62,4 +63,32 @@ img {
 
 .card-text {
   padding-left: 8px;
+}
+
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-primary);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }

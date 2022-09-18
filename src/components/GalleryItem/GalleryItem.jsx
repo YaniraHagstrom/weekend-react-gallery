@@ -11,8 +11,9 @@ export default function GalleryItem({galleryItem, fetchItems}){
     const [photoDescription, setPhotoDescription] = useState(false);
     
     // These two constants initialize tooltips for the image and
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        // ISSUE: tooltip not clearing after clicking
+    // const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    // const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     
     
     // This creates a toggle effect when the photo is clicked. 
@@ -40,12 +41,12 @@ export default function GalleryItem({galleryItem, fetchItems}){
         <div className='card'>
             <div onClick={showDescription}>
                 {photoDescription?
-                <p className="description">{galleryItem.description}</p>:
-                <img type="button" className="card-img-top" src={galleryItem.path} alt={galleryItem.description} data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"/> 
+                <p type="button" className="description" >{galleryItem.description} </p>:
+                <img type="button" className="card-img-top" src={galleryItem.path} alt={galleryItem.description} /> 
                     }
             </div>
             <div className="container">
-                <p className="love" type="button" onClick={updateLikes} data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Love This">❤️</p>
+                <p className="love" type="button" onClick={updateLikes} >❤️</p>
                 <p className="card-text">{galleryItem.likes} people love this!</p>
             </div>
         </div>
@@ -53,11 +54,3 @@ export default function GalleryItem({galleryItem, fetchItems}){
 
 }
 
-{/* <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div> */}
