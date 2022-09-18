@@ -12,23 +12,54 @@
 .App-title {
   font-size: 1.5em;
 }
+
 img {
-  width: 150px;
+  width: 180px;
+  height: 260px;
+  border-radius: 5px 5px 5px 5px;
+  padding: 10px;
+}
+
+.galleryList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center s;
+  margin-top: 50px;
+  margin-left: 150px;
+  margin-right: 150px;
+  gap: 20px 15px;
 }
 
 .card {
   /* Add shadows to create the "card" effect */
+  display: flex;
+  order: 5;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  width: 170px;
-}
+  width: 210px;
+} 
 
 /* On mouse-over, add a deeper shadow */
-.card:hover {
+/* .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
+} */
 
 /* Add some padding inside the card container */
 .container {
-  padding: 2px 16px;
+  /* padding: 2px 16px; */
+  display: flex;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  height: 260px;
+  width: 208px;
+  padding: 10px;
+  margin-bottom: 0px;
+}
+
+.card-text {
+  padding-left: 8px;
 }
