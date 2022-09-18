@@ -6,7 +6,7 @@ import GalleryItem from "../GalleryItem/GalleryItem.jsx"
 export default function GalleryList({galleryList, fetchItems}){
     // console.log(galleryList);
     return(
-        <div>
+        <div className = "galleryList">
             {galleryList.map( galleryItem => {
                 return(
                     <GalleryItem galleryItem = {galleryItem} fetchItems={fetchItems}/>
