@@ -1,7 +1,5 @@
 # Weekend React Gallery
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
-
 ## Description
 
 This weekend project required me to use my newly learned skills using React. I began by first creating a visual layout (pictured below) of what components I intended to use and the general flow of props from each component. Having a visual layout of the problem helps me get a clear picture of what needs to be done to accomplish the task. It also prevents me from diving straight into the code which I have learned the hard way from previous projects is not the best approach.
