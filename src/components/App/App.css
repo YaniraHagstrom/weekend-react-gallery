@@ -12,7 +12,83 @@
 .App-title {
   font-size: 1.5em;
 }
+
 img {
-  width: 150px;
+  width: 180px;
+  height: 260px;
+  border-radius: 5px 5px 5px 5px;
+  padding: 10px;
 }
 
+.galleryList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center s;
+  margin-top: 20px;
+  margin-left: 150px;
+  margin-right: 150px;
+  gap: 15px 15px;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  display: flex;
+  order: 5;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 210px;
+} 
+
+/* On mouse-over, add a deeper shadow */
+/* .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+} */
+
+/* Add some padding inside the card container */
+.container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  height: 260px;
+  width: 208px;
+  padding: 10px;
+  margin-bottom: 0px;
+}
+
+.card-text {
+  padding-left: 8px;
+}
+
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-primary);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
